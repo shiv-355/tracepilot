@@ -45,7 +45,17 @@ TracePilot currently supports three review prompts:
 
 ## Screenshots
 
-Screenshots demonstrate the main dashboard, AI review output, Respan logging status, prompt comparison workflow, and Respan dashboard metrics.
+### AI Code Review Dashboard
+
+![TracePilot AI code review dashboard](screenshots/dashboard-review-output.png)
+
+### Detailed Review Findings
+
+![Detailed AI review findings](screenshots/review-details.png)
+
+### Prompt Comparison Workflow
+
+![Prompt comparison workflow](screenshots/prompt-comparison.png)
 
 ## Local Development
 
