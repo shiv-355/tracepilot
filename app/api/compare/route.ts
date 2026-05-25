@@ -1,5 +1,6 @@
 import { GoogleGenAI } from "@google/genai";
 import { NextResponse } from "next/server";
+import { jsonrepair } from "jsonrepair";
 
 const ai = new GoogleGenAI({
   apiKey: process.env.GEMINI_API_KEY,
@@ -267,7 +268,7 @@ function parseGeminiJson(content: string) {
   try {
     return JSON.parse(cleaned);
   } catch {
-    const repaired = cleaned.replace(/\\(?!["\\/bfnrtu])/g, "\\\\");
+    const repaired = jsonrepair(cleaned);
     return JSON.parse(repaired);
   }
 }
